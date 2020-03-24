@@ -1,5 +1,7 @@
 package com.usernameme.community.model;
 
+import lombok.Data;
+
 /**
  * 功能描述:
  *
@@ -9,6 +11,7 @@ package com.usernameme.community.model;
  * @Date: 2020/2/28 0028 下午 5:51
  * @Version: V
  */
+@Data
 public class User {
     private Integer id;
     private String name;
@@ -16,6 +19,15 @@ public class User {
     private String token;
     private long gmtCreate;
     private long gmtModified;
+    private String avatarUrl;
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
+    }
 
     public Integer getId() {
         return id;

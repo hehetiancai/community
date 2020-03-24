@@ -47,9 +47,9 @@ public class GithubProvider {
         try {
             Response response = client.newCall(request).execute();
             String string = response.body().string();
-            GithubUser githubuser = JSON.parseObject(string, GithubUser.class);
+            GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
             System.out.println("正确");
-            return githubuser;
+            return githubUser;
         } catch (IOException e) {
             System.out.println("异常");
         }

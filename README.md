@@ -9,14 +9,15 @@
 ```sql
 create table USER
 (
-    ID           INTEGER default NEXT VALUE FOR "PUBLIC"."SYSTEM_SEQUENCE_B70DB47E_FEB2_44C2_BAA8_FE7CB14651E3" auto_increment,
+    ID           int auto_increment,
     ACCOUNT_ID   VARCHAR(100),
     NAME         VARCHAR(50),
     TOKEN        CHAR(36),
     GMT_CREATE   BIGINT,
     GMT_MODIFIED BIGINT,
-    constraint TABLE_NAME_PK
+    constraint USER_PK
         primary key (ID)
 );
+
 
 ```
